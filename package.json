@@ -1,0 +1,20 @@
+{
+  "name": "friends-website",
+  "version": "1.0.0",
+  "description": "Website for FRIENDS of Sullivan's Island Elementary School",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "check": "html-validate '_site/**/*.html' && node scripts/a11y-check.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "html-validate": "^11.5.6"
+  }
+}

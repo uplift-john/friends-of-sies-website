@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}FRIENDS of SIES</title>
+  <meta name="description" content="{{ description or 'FRIENDS of Sullivan\'s Island Elementary School raises funds for the teachers, programs, and resources the district doesn\'t pay for.' }}">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <p class="wordmark"><a href="/">FRIENDS <span>of SIES</span></a></p>
+  </header>
+  <main id="main">
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <p>FRIENDS of Sullivan's Island Elementary School</p>
+  </footer>
+</body>
+</html>

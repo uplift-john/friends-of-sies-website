@@ -1,0 +1,20 @@
+/* FRIENDS of SIES — mobile-first, hand-written CSS */
+:root {
+  --ink: #1d3557;
+  --paper: #fdfcf9;
+  --accent: #e07a3f;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
