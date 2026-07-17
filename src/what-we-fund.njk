@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: What We Fund
+permalink: /what-we-fund/
+description: "The teachers, programs, and campus improvements FRIENDS of SIES pays for at Sullivan's Island Elementary — beyond what the district budget covers."
+---
+<h1>What We Fund</h1>
+<p class="lede">When a family gives, this is what their money becomes. FRIENDS pays for the people, programs, and places that the Charleston County School District budget does not cover — in service of the academic, physical, social, and emotional well-being of every student.</p>
+
+{% for pillar in pillars %}
+<section class="fund-pillar" aria-labelledby="pillar-{{ loop.index }}">
+  <h2 id="pillar-{{ loop.index }}">{{ pillar.title }}</h2>
+  <p>{{ pillar.example }}</p>
+  <ul>
+    {% for item in pillar.items %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+
+<section class="numbers" aria-labelledby="year-numbers">
+  <h2 id="year-numbers">A recent year, in dollars</h2>
+  <p>In our 2025–26 year — our strongest since COVID — the community raised roughly <strong>$175K–$200K</strong>. Money already put to work during the year included about <strong>$35K toward additional teacher salaries</strong>, <strong>$11K for the aquarium tanks</strong>, and <strong>$6K for the Green Heart garden program</strong>. A generous <strong>$15K gift from LENS</strong> was earmarked for the aquarium tanks and their upkeep.</p>
+  <p>Spread across our ~500 students, our annual goal works out to about <strong>$500 per child</strong> — a little from every family goes a very long way.</p>
+  <p class="fine-print">Public figures are rounded; final numbers are approved by the board.</p>
+</section>
+
+<section class="closing-cta">
+  <h2>Help build what's next</h2>
+  <p><a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a></p>
+</section>

@@ -1,0 +1,42 @@
+# Annual fundraising rhythm (CONTEXT.md §5)
+- name: Directory & Signs
+  season: Fall (September)
+  slug: directory-signs
+  summary: >-
+    Local businesses sponsor placement in the school directory and on
+    school-fence banner signage — putting their name in front of the whole
+    school community. Sponsorship is fully tax-deductible.
+  participate: Become a sponsor — email us to reserve directory or sign placement.
+  link: null
+  linkLabel: null
+- name: Soar on Skimmers Fun Run
+  season: "Fall — next event: October 23, 2026 (date to be confirmed)"
+  slug: fun-run
+  summary: >-
+    An all-school event during the school day — all students participate!
+    Kids collect pledges through personal, shareable fundraising links sent
+    to family and friends.
+  participate: Register through RunSignUp and share your student's pledge link.
+  link: "TODO"
+  linkLabel: "Fun Run registration (RunSignUp) — link coming soon"
+- name: Give to Grow
+  season: Year-round (peaks November–December)
+  slug: give-to-grow
+  summary: >-
+    Our core annual campaign. Everyone gets involved — give whatever you like!
+    The goal is 100% school participation, and families who donate receive
+    SIES stickers.
+  participate: Give any time, in any amount.
+  link: "TODO"
+  linkLabel: "Donation link coming soon"
+- name: Spring Auction
+  season: Spring (March)
+  slug: spring-auction
+  summary: >-
+    Our largest single fundraiser — an online silent auction paired with
+    in-person gatherings, from a kickoff lunch to a cocktail party at local
+    venues. The community donates art, travel, dining, wellness, teacher
+    experiences, "Principal for a Day," and the beloved "Paint the Rock" series.
+  participate: "Bid, donate an item, become a sponsor, or volunteer."
+  link: "TODO"
+  linkLabel: "Auction site (Event.Gives) — link coming soon"

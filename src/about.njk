@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: Our Story
+permalink: /about/
+description: "The mission, board, and island heritage of FRIENDS of Sullivan's Island Elementary School — and how giving works through the Coastal Community Foundation."
+---
+<h1>Our Story</h1>
+<p class="lede">FRIENDS of SIES is a parent-run board that raises funds to support the academic, physical, social and emotional well-being of each student at SIES.</p>
+
+<section aria-labelledby="mission">
+  <h2 id="mission">Our mission</h2>
+  <p>We exist to provide direct financial support to enhance the learning experience in ways that strengthen the academic, physical, social and emotional well-being of each student at SIES — formally, to raise funds to enhance the ability of Sullivan's Island Elementary School to attain its educational goals.</p>
+</section>
+
+<section aria-labelledby="heritage">
+  <h2 id="heritage">An island tradition</h2>
+  <p>FRIENDS grew out of a long Sullivan's Island tradition of residents and local business leaders investing directly in their neighborhood school — historically "a printer, a restauranteer, a developer, a lawyer, a banker, among others," volunteering their expertise. Together they created a permanent endowment at the Coastal Community Foundation, intended as their collective memorial, to support the school beyond what the Charleston County School District provides.</p>
+  <p>That spirit is intergenerational by design: the community models philanthropy for the very kids who benefit from it. Sullivan's Island Elementary is, in our community's words, an integral part of our island's culture — serving families across Sullivan's Island, Isle of Palms, and Mount Pleasant.</p>
+</section>
+
+<section aria-labelledby="how-giving-works">
+  <h2 id="how-giving-works">How giving works</h2>
+  <p>FRIENDS raises and holds its money through the <strong>Coastal Community Foundation of South Carolina (CCF)</strong>, a 501(c)(3) public charity that acts as our tax-exempt custodian. {{ site.taxLine }}</p>
+  <p>Funds flow through two CCF vehicles: the <strong>Sullivan's Island School Endowment</strong>, a permanent endowment, and the <strong>Sullivan's Island School Grant Fund</strong>, the working fund used for annual spending.</p>
+</section>
+
+<section aria-labelledby="board">
+  <h2 id="board">The 2026–2027 Board</h2>
+  <p>FRIENDS is a parent-run, self-perpetuating volunteer board. Members serve two-year terms, and the board meets quarterly, organized into Governance, Internal Affairs, and External Affairs committees.</p>
+  <ul class="board-list">
+    {% for member in board %}
+    <li><strong>{{ member.name }}</strong> — {{ member.role }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="closing-cta">
+  <h2>Be part of the story</h2>
+  <p><a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a></p>
+</section>

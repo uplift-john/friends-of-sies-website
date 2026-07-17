@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Events
+permalink: /events/
+description: "The FRIENDS of SIES annual calendar: Directory & Signs, the Soar on Skimmers Fun Run, Give to Grow, and the Spring Auction."
+---
+<h1>Events &amp; the Annual Calendar</h1>
+<p class="lede">FRIENDS runs on four moments across the school year — from fall sponsorships to the spring auction, with our year-round Give to Grow campaign always open.</p>
+
+{% for event in events %}
+<section class="event" id="{{ event.slug }}" aria-labelledby="{{ event.slug }}-h">
+  <h2 id="{{ event.slug }}-h">{{ event.name }}</h2>
+  <p class="event-season">{{ event.season }}</p>
+  <p>{{ event.summary }}</p>
+  <p><strong>How to take part:</strong> {{ event.participate }}</p>
+  {% if event.link == "TODO" %}
+  <p class="todo-placeholder"><strong>{{ event.linkLabel }}</strong></p>
+  {% endif %}
+</section>
+{% endfor %}
+
+<section aria-labelledby="auction-history">
+  <h2 id="auction-history">About the auction's tradition</h2>
+  <p>The spring auction has been an island tradition for years — known historically as "Auction by the Sea" and more recently themed around "The Rock." The theme evolves each year; the community spirit doesn't. Details and the 2027 date will be announced.</p>
+</section>

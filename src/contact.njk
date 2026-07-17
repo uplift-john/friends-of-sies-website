@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+title: Contact
+permalink: /contact/
+description: "Get in touch with FRIENDS of SIES, or join the newsletter for updates on events and impact."
+---
+<h1>Contact &amp; Newsletter</h1>
+<p class="lede">Questions, ideas, auction items, sponsorships — we'd love to hear from you.</p>
+
+<section aria-labelledby="contact-h">
+  <h2 id="contact-h">Get in touch</h2>
+  <p>General inquiries: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  <p>Advertising &amp; sponsorships: <a href="mailto:{{ site.advertisingEmail }}">{{ site.advertisingEmail }}</a></p>
+</section>
+
+<section aria-labelledby="newsletter-h">
+  <h2 id="newsletter-h">Join the FRIENDS newsletter</h2>
+  <p>Be first to hear about the Fun Run, the auction, and what your giving builds.</p>
+  {# TODO: newsletter provider not chosen — form action is a placeholder (HUMAN_TODO.md) #}
+  <form class="newsletter-form" action="#TODO-newsletter-provider" method="post">
+    <label for="newsletter-email">Email address</label>
+    <input type="email" id="newsletter-email" name="email" required autocomplete="email">
+    <button type="submit" class="btn btn-primary">Sign up</button>
+    <p class="fine-print">Signup is almost ready — while we finish setting it up, email <a href="mailto:{{ site.email }}">{{ site.email }}</a> with "newsletter" in the subject and we'll add you.</p>
+  </form>
+</section>

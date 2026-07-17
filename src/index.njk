@@ -1,7 +1,58 @@
 ---
 layout: layouts/base.njk
-title: Home
+description: "FRIENDS of SIES funds the programs the district doesn't — the aquariums, the track, the interventionists, the art and music days at Sullivan's Island Elementary."
 ---
-<h1>FRIENDS of Sullivan's Island Elementary School</h1>
-<p>FRIENDS funds the programs the district doesn't.</p>
-<p><a class="btn" href="#TODO-donation-url">Give to Grow — Donate</a></p>
+<section class="hero">
+  <h1>Friends builds what's&nbsp;possible.</h1>
+  <p class="lede">{{ site.name }} is the funding engine behind what makes our school exceptional. We're a parent-run organization that raises money for the teachers, programs, and resources the district doesn't pay for — the things that turn a good public school into a remarkable one.</p>
+  <p class="hero-cta">
+    <a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a>
+  </p>
+  <p class="hero-note">Everyone gets involved. Give whatever you like.</p>
+</section>
+
+<section class="pillars" aria-labelledby="pillars-heading">
+  <h2 id="pillars-heading">What your gift becomes</h2>
+  <p>FRIENDS funds the programs the district doesn't — the aquariums, the track, the interventionists, the art and music days.</p>
+  <div class="pillar-grid">
+    {% for pillar in pillars %}
+    <article class="pillar">
+      <h3>{{ pillar.title }}</h3>
+      <p>{{ pillar.example }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  <p><a href="/what-we-fund/">See everything we fund →</a></p>
+</section>
+
+<section class="numbers" aria-labelledby="numbers-heading">
+  <h2 id="numbers-heading">Our impact, by the numbers</h2>
+  <dl class="stat-grid">
+    <div class="stat"><dt>Raised last year</dt><dd>~$200K</dd></div>
+    <div class="stat"><dt>Students served</dt><dd>~500</dd></div>
+    <div class="stat"><dt>Per child, per year</dt><dd>~$500</dd></div>
+    <div class="stat"><dt>Participation goal</dt><dd>100%</dd></div>
+  </dl>
+  <p class="fine-print">Figures are approximate, from our 2025–26 year — our strongest since COVID.</p>
+</section>
+
+<section class="rhythm" aria-labelledby="rhythm-heading">
+  <h2 id="rhythm-heading">A year of giving, together</h2>
+  <ol class="season-list">
+    {% for event in events %}
+    <li><strong><a href="/events/#{{ event.slug }}">{{ event.name }}</a></strong> — {{ event.season }}</li>
+    {% endfor %}
+  </ol>
+  <p><a href="/events/">Explore the annual calendar →</a></p>
+</section>
+
+<section class="pta-note" aria-labelledby="pta-heading">
+  <h2 id="pta-heading">Wondering how FRIENDS differs from the PTA?</h2>
+  <p>PTA creates the experience. FRIENDS creates the impact. Two groups, one amazing school — <a href="/friends-and-pta/">here's the short version</a>.</p>
+</section>
+
+<section class="closing-cta">
+  <h2>Join your neighbors in giving</h2>
+  <p>{{ site.taxLine }}</p>
+  <p><a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a></p>
+</section>

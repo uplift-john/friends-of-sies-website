@@ -37,7 +37,7 @@ custom domain is needed — Pages gives you a free `*.pages.dev` URL.
 ## 3. Find your Account ID
 In the Cloudflare dashboard, go to **Workers & Pages**. Your **Account ID** is shown in the
 right-hand sidebar (copy it). Shortcut: it's also the long string in the dashboard URL —
-`https://dash.cloudflare.com/<THIS-IS-YOUR-ACCOUNT-ID>`.
+`https://dash.cloudflare.com/4bd1d8caa9807872d3f86939f46d6589`.
 
 ## 4. Create the API token
 1. Cloudflare dashboard → your profile icon (top right) → **My Profile** → **API Tokens**.
@@ -53,8 +53,8 @@ right-hand sidebar (copy it). Shortcut: it's also the long string in the dashboa
 Create a `.env` file **inside** `/Users/johnmoye/Desktop/SIES Friends/friends website/` with:
 
 ```
-CLOUDFLARE_API_TOKEN=paste-your-token-here
-CLOUDFLARE_ACCOUNT_ID=paste-your-account-id-here
+CLOUDFLARE_API_TOKEN= cfut_64VmL5S1niz21mvEOQyMS6tLzT3mWKzsS6ijLY3q779c8d1c
+CLOUDFLARE_ACCOUNT_ID=4bd1d8caa9807872d3f86939f46d6589
 ```
 
 Never commit this file. The loop is instructed to keep `.env` out of git and to copy these into

@@ -3,20 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} · {% endif %}FRIENDS of SIES</title>
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.shortName }}</title>
   <meta name="description" content="{{ description or 'FRIENDS of Sullivan\'s Island Elementary School raises funds for the teachers, programs, and resources the district doesn\'t pay for.' }}">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <p class="wordmark"><a href="/">FRIENDS <span>of SIES</span></a></p>
+    <div class="site-header-inner">
+      {# TODO placeholder wordmark — no approved logo yet (HUMAN_TODO.md) #}
+      <p class="wordmark"><a href="/">FRIENDS<span class="wordmark-sub">of SIES</span></a></p>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          {% for item in nav %}
+          <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {% endfor %}
+          <li><a class="btn btn-nav" href="/ways-to-give/">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main id="main">
     {{ content | safe }}
   </main>
   <footer class="site-footer">
-    <p>FRIENDS of Sullivan's Island Elementary School</p>
+    <div class="footer-inner">
+      <p class="footer-name">{{ site.name }}</p>
+      <p class="footer-tagline">{{ site.tagline }}</p>
+      <p>Serving families across Sullivan's Island, Isle of Palms, and Mount Pleasant, South Carolina.</p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p class="footer-tax">{{ site.taxLine }}</p>
+      <nav aria-label="Footer">
+        <ul class="footer-nav">
+          {% for item in nav %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+          <li><a href="/friends-and-pta/">FRIENDS &amp; the PTA</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
