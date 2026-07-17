@@ -18,12 +18,18 @@
         <img class="brand-logo" src="/assets/images/logo.png" alt="FRIENDS of SIES roundel logo — Together We Are an Ocean" width="52" height="52">
         <span class="wordmark">FRIENDS<span class="wordmark-sub">of SIES</span></span>
       </a>
+      <div class="header-actions">
+        <a class="btn btn-nav" href="/ways-to-give/">Donate</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-list">
+          <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          Menu
+        </button>
+      </div>
       <nav class="site-nav" aria-label="Main">
-        <ul>
+        <ul id="site-nav-list">
           {% for item in nav %}
           <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
-          <li><a class="btn btn-nav" href="/ways-to-give/">Donate</a></li>
         </ul>
       </nav>
     </div>
@@ -48,5 +54,24 @@
       </nav>
     </div>
   </footer>
+  <script>
+    (function () {
+      var toggle = document.querySelector(".nav-toggle");
+      var header = document.querySelector(".site-header");
+      if (!toggle || !header) return;
+      toggle.addEventListener("click", function () {
+        var open = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!open));
+        header.classList.toggle("nav-open", !open);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && header.classList.contains("nav-open")) {
+          toggle.setAttribute("aria-expanded", "false");
+          header.classList.remove("nav-open");
+          toggle.focus();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
