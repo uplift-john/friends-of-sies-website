@@ -44,6 +44,7 @@ h1, h2, h3 {
   font-family: var(--serif);
   line-height: 1.15;
   color: var(--ink);
+  text-wrap: balance;
 }
 
 h1 { font-size: clamp(2rem, 6vw, 3.25rem); margin: 0 0 0.75rem; }
@@ -326,7 +327,9 @@ main {
   display: block;
 }
 .pillar-img-placeholder {
-  background: linear-gradient(140deg, var(--mist) 0%, var(--sea-green) 100%);
+  background:
+    radial-gradient(circle at 82% 18%, var(--gold) 0 11%, transparent 12%),
+    linear-gradient(140deg, var(--ink) 0%, var(--sea) 100%);
   display: flex;
   align-items: flex-end;
   padding: 0.6rem 0.9rem;
@@ -336,8 +339,7 @@ main {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink);
-  opacity: 0.75;
+  color: #fff;
 }
 .pillar-body { padding: 1.15rem 1.25rem 1.4rem; }
 .pillar-body h3 { margin: 0 0 0.4rem; }
@@ -383,8 +385,9 @@ main {
   margin: 2rem 0;
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 }
+@media (min-width: 34em) { .season-list { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 62em) { .season-list { grid-template-columns: repeat(4, 1fr); } }
 .season-item {
   background: var(--paper);
   border-radius: var(--radius);
@@ -420,7 +423,7 @@ main {
 .page-hero h1 { color: #fff; margin: 0 0 0.6rem; }
 .page-hero .lede { color: #e9f3f2; margin: 0; }
 .page-hero .lede a { color: #fff; }
-.page-hero .lede strong { color: var(--gold); }
+.page-hero .lede strong { color: #ffdf9e; }
 .band-wave-bottom { position: absolute; bottom: -1px; left: 0; width: 100%; height: clamp(1.75rem, 4vw, 3.25rem); display: block; }
 
 /* Story figure (About) */
@@ -455,11 +458,11 @@ main {
   .card-duo { grid-template-columns: 1fr 1fr; }
   .card-duo .card { margin-bottom: 0; }
 }
-.fund-pillar { display: grid; gap: 1.5rem; align-items: center; }
+.card-has-img { display: grid; gap: 1.5rem; align-items: center; }
 @media (min-width: 46em) {
-  .fund-pillar-has-img { grid-template-columns: 1fr 15rem; }
+  .card-has-img { grid-template-columns: 1fr 15rem; }
 }
-.fund-pillar-img {
+.card-img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;

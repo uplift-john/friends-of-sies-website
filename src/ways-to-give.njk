@@ -12,16 +12,22 @@ description: "Give to Grow, the Fun Run, the Spring Auction, and business sponso
   {% include "partials/wave-sand.njk" %}
 </header>
 
-<section class="give-option" aria-labelledby="give-to-grow">
-  <h2 id="give-to-grow">Give to Grow — our year-round campaign</h2>
-  <p>The simplest way to give, any time of year. Our goal is 100% school participation: every family, at whatever level feels right. Families who donate receive SIES stickers, and every gift goes straight to work in classrooms.</p>
-  <p class="todo-placeholder"><strong>Online giving link coming soon.</strong> Until then, email <a href="mailto:{{ site.email }}">{{ site.email }}</a> to give today.</p>
+<section class="give-option card-has-img" aria-labelledby="give-to-grow">
+  <div>
+    <h2 id="give-to-grow">Give to Grow — our year-round campaign</h2>
+    <p>The simplest way to give, any time of year. Our goal is 100% school participation: every family, at whatever level feels right. Families who donate receive SIES stickers, and every gift goes straight to work in classrooms.</p>
+    <p class="todo-placeholder"><strong>Online giving link coming soon.</strong> Until then, email <a href="mailto:{{ site.email }}">{{ site.email }}</a> to give today.</p>
+  </div>
+  <img class="card-img" src="/assets/images/garden-harvest.jpg" alt="Students show off radishes harvested from the school garden" loading="lazy">
 </section>
 
-<section class="give-option" aria-labelledby="fun-run">
-  <h2 id="fun-run">Soar on Skimmers Fun Run</h2>
-  <p>Every fall, all students participate in a school-day fun run, collecting pledges through personal fundraising links shared with family and friends. Registration runs through RunSignUp.</p>
-  <p class="todo-placeholder"><strong>Registration link coming soon.</strong></p>
+<section class="give-option card-has-img" aria-labelledby="fun-run">
+  <div>
+    <h2 id="fun-run">Soar on Skimmers Fun Run</h2>
+    <p>Every fall, all students participate in a school-day fun run, collecting pledges through personal fundraising links shared with family and friends. Registration runs through RunSignUp.</p>
+    <p class="todo-placeholder"><strong>Registration link coming soon.</strong></p>
+  </div>
+  <img class="card-img" src="/assets/images/fun-run-beach.jpg" alt="Students run along the sand during the Soar on Skimmers Fun Run" loading="lazy">
 </section>
 
 <section class="give-option" aria-labelledby="auction">
@@ -38,4 +44,13 @@ description: "Give to Grow, the Fun Run, the Spring Auction, and business sponso
 <section class="give-option" aria-labelledby="direct">
   <h2 id="direct">Family &amp; corporate gifts, any time</h2>
   <p>Direct gifts from families and businesses are welcome all year. Email <a href="mailto:{{ site.email }}">{{ site.email }}</a> and we'll make it easy.</p>
+</section>
+
+<section class="band band-sea closing-cta">
+  <svg class="band-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,45 C240,15 480,60 720,35 C960,10 1200,55 1440,30 L1440,0 L0,0 Z" fill="#fdfaf5"></path></svg>
+  <div class="band-inner">
+    <h2 class="section-title">Ready to give today?</h2>
+    <p>Everyone gets involved. Give whatever you like.</p>
+    <p><a class="btn btn-primary" href="mailto:{{ site.email }}">Email us to give</a></p>
+  </div>
 </section>

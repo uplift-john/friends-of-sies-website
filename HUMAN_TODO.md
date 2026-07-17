@@ -9,6 +9,7 @@
 - [ ] Final approved impact figures — site uses rounded ranges from CONTEXT.md §4; board must approve.
 - [ ] Fun Run date Oct 23, 2026 — confirm. Spring 2027 auction date/theme — not set.
 - [ ] Mailing address — not published (none provided).
+- [ ] Confirm both contact emails are correct: siesfriends.skimmers@gmail.com (general) and the separate advertising address in src/_data/site.yaml — a design reviewer flagged the pair as a possible typo.
 - [ ] Newsletter signup form posts to a `TODO` placeholder action — choose an email provider and wire it up.
 
 ## Post-launch / out of loop scope
