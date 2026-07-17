@@ -1,0 +1,83 @@
+backend:
+  name: github
+  repo: uplift-john/friends-of-sies-website
+  branch: main
+  base_url: https://sveltia-cms-auth.johnmoye82.workers.dev
+
+media_folder: src/assets/images
+public_folder: /assets/images
+
+collections:
+  - name: settings
+    label: Site Settings
+    icon: settings
+    files:
+      - name: site
+        label: Site Settings
+        file: src/_data/site.yaml
+        fields:
+          - { label: Organization Name, name: name, widget: string }
+          - { label: Short Name, name: shortName, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Contact Email, name: email, widget: string }
+          - { label: Advertising Email, name: advertisingEmail, widget: string }
+          - { label: Tax Line, name: taxLine, widget: text }
+
+  - name: events
+    label: Events
+    icon: calendar_month
+    files:
+      - name: events
+        label: Events
+        file: src/_data/events.yaml
+        fields:
+          - label: Events
+            name: events
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Season, name: season, widget: string }
+              - { label: Slug, name: slug, widget: string, hint: "URL anchor on the events page — change with care." }
+              - { label: Summary, name: summary, widget: text }
+              - { label: How to Participate, name: participate, widget: string }
+              - { label: Link (URL), name: link, widget: string, required: false, hint: "Full URL, e.g. the RunSignUp / Event.Gives / donation page." }
+              - { label: Link Label, name: linkLabel, widget: string, required: false }
+
+  - name: pillars
+    label: Funding Pillars
+    icon: category
+    files:
+      - name: pillars
+        label: Funding Pillars
+        file: src/_data/pillars.yaml
+        fields:
+          - label: Pillars
+            name: pillars
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: Image Alt Text, name: imageAlt, widget: string, required: false }
+              - { label: Example, name: example, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                field: { label: Item, name: item, widget: string }
+
+  - name: board
+    label: Board
+    icon: groups
+    files:
+      - name: board
+        label: Board Members
+        file: src/_data/board.yaml
+        fields:
+          - label: Board Members
+            name: board
+            widget: list
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: Role, name: role, widget: string }
+              - { label: Name, name: name, widget: string }

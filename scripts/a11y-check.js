@@ -33,7 +33,10 @@ function walk(dir) {
   });
 }
 
-const pages = walk(SITE);
+// admin/ is the Sveltia CMS app shell — no static content to check
+const pages = walk(SITE).filter(
+  (p) => !path.relative(SITE, p).startsWith("admin" + path.sep)
+);
 if (pages.length === 0) {
   console.error("FAIL: no HTML pages found in _site/ — run the build first.");
   process.exit(1);
