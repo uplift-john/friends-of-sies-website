@@ -1,6 +1,8 @@
 # PROGRESS
 
-STATUS: DESIGN LOOP IN PROGRESS (content loop completed earlier — see git history)
+STATUS: DESIGN COMPLETE — reviewer #3 (fresh context) passed all 10 rubric
+criteria ≥ 8 on 2026-07-17; deployed and confirmed live (new hero markup at
+https://friends-of-sies.pages.dev/ · HTTP 200). Content loop completed earlier.
 
 ## Design loop
 
@@ -55,9 +57,15 @@ Eyes: `node scripts/screenshots.mjs` → design-review/ (8 pages × 1440/768/390
   text-wrap balance, Give to Grow event card gets harvest photo. Verified via
   element crops: taxline single-line; photo present.
 
-### Next
-Reviewer #3 (fresh) re-scores. PASS → push (CI deploys) → live 200 →
-DESIGN COMPLETE. FAIL → STATUS: HALTED (cap reached) with scores.
+- **Reviewer #3 verdict: PASS.** Scores: 9/9/8/8/8/8/9/9/9/8 (all ≥ 8).
+  Build + html-validate + a11y green; pushed 42e450a; CI run 29602840638
+  deployed; live URL confirmed serving the redesign (200).
+
+### Nice-to-haves the passing reviewer noted (for future humans/loops)
+- More photo variety (garden/fun-run/playground shots reused on 3–4 pages) —
+  IMAGE_WISHLIST.md already lists the exact shots wanted.
+- Style the open mobile-menu panel more richly; contact cards equal height;
+  What We Fund could be more photo-led at desktop; About line length.
 
 ## Definition of Done (content loop) — all complete
 Build ✓ · Live 200 ✓ · CTA ✓ · validate+a11y ✓ · Lighthouse 98/95 ✓ · CI deploy ✓
