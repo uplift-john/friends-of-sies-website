@@ -60,6 +60,10 @@ Eyes: `node scripts/screenshots.mjs` → design-review/ (8 pages × 1440/768/390
 - **Reviewer #3 verdict: PASS.** Scores: 9/9/8/8/8/8/9/9/9/8 (all ≥ 8).
   Build + html-validate + a11y green; pushed 42e450a; CI run 29602840638
   deployed; live URL confirmed serving the redesign (200).
+- **Post-loop hotfix (bcc6b82):** unanchored `.gitignore` rule `logo.png` had
+  silently excluded src/assets/images/logo.png, so the live header logo 404'd
+  and fell back to alt text. Anchored raw-source ignores to repo root (`/logo.png`
+  etc.), tracked the asset, redeployed; logo + homepage confirmed 200 live.
 
 ### Nice-to-haves the passing reviewer noted (for future humans/loops)
 - More photo variety (garden/fun-run/playground shots reused on 3–4 pages) —
