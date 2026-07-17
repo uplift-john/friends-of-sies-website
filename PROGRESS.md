@@ -4,34 +4,39 @@ STATUS: DESIGN LOOP IN PROGRESS (content loop completed earlier — see git hist
 
 ## Design loop
 
-ITERATION: 1 (max 8)
+ITERATION: 6 (max 8)
 Live URL: https://friends-of-sies.pages.dev/ · push to main auto-deploys.
 Eyes: `node scripts/screenshots.mjs` → design-review/ (8 pages × 1440/768/390).
 
-### Rubric scores (after iteration 1)
-1. Hero: 8 — full-bleed playground photo, navy scrim, big Fraunces H1, coral CTA
-2. Brand fit: 7 — logo in header, palette from logo, gold accent introduced
-3. Imagery: 6 — hero photo done; pillars/inner pages still text-only
-4. Hierarchy & type: 7
-5. Whitespace & rhythm: 5 — body still one monotonous column
-6. Components: 5 — pillar cards/stats flat, footer plain
-7. Color & contrast: 7
-8. Mobile: 5 — nav wraps to two rows, no hamburger ← WEAKEST (tied w/ rhythm)
-9. Consistency: 7
-10. Polish: 6 — favicon + wave divider added; hover/focus improved
+### Rubric self-scores (after iteration 6) — believed all ≥ 8, pending reviewer
+1. Hero: 8 · 2. Brand fit: 8 · 3. Imagery: 8 · 4. Hierarchy & type: 8
+5. Whitespace & rhythm: 8 · 6. Components: 8 · 7. Color & contrast: 8
+8. Mobile: 8 · 9. Consistency: 8 · 10. Polish: 8
 
 ### Iteration log
 - **Iter 1 — imagery/brand foundation.** Optimized 6 real photos + logo into
-  src/assets/images/ (sources moved to source-photos/). Logo + favicon in header,
-  full-bleed photo hero with scrim + wave, palette vars from logo (navy #1c3d5a,
-  teal #2b7a78, mist, gold), button depth/hover/focus-visible.
-  Decision: coral stays the ONE action color; gold is highlight-only (hero-note,
-  focus rings). Hero photo = playground community shot (widest, reads "campus").
+  src/assets/images/ (sources → source-photos/). Logo + favicon in header,
+  full-bleed photo hero with scrim + wave, palette vars from logo.
+  Decision: coral = the ONE action color; gold = highlight only (stats, focus).
   Decision: header logo alt is descriptive (a11y gate requires non-empty alt).
+- **Iter 2 — mobile nav.** Accessible hamburger ≤900px (aria-expanded, Escape,
+  44px targets), Donate pinned in header at all sizes. Overflow at 390px: 0px.
+- **Iter 3 — rhythm/components.** Full-bleed alternating bands (sand/white/
+  navy/mist/teal), photo pillar cards, navy stat band w/ gold Fraunces numerals,
+  gold-topped season cards, teal closing band. Fixed stat wrap on mobile.
+- **Iter 4 — consistency.** Shared navy→teal page-hero band + sand wave on all
+  7 inner pages + 404; events page: Soar on Skimmers art + beach photo; About:
+  garden figure; card styling for event/give sections; unified closing CTAs.
+- **Iter 5 — cards everywhere + AA.** .card/.card-duo on PTA/businesses/contact,
+  fund-pillar thumbnails, newsletter form focus states. Contrast math fixes:
+  accent #d96c3f→#b95428 (white text 4.8:1), band-sea gradient end darkened,
+  page-hero lede lightened.
+- **Iter 6 — verification pass.** Re-viewed all pages/widths; checked suspected
+  CTA clipping at 390px (false alarm — thumbnail artifact; live box is correct).
 
 ### Next
-Iter 2: mobile nav (accessible hamburger ≤768px) — weakest criterion (Mobile 5).
-Then: section rhythm/alternating bands + pillar cards w/ photos; inner pages.
+Exit check: fresh reviewer subagent scores the 24 screenshots strictly.
+If all ≥ 8 → deploy, confirm live 200 → DESIGN COMPLETE.
 
 ## Definition of Done (content loop) — all complete
 Build ✓ · Live 200 ✓ · CTA ✓ · validate+a11y ✓ · Lighthouse 98/95 ✓ · CI deploy ✓
