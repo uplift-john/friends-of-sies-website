@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Thank You
+permalink: /volunteer-thanks/
+noindex: true
+eleventyExcludeFromCollections: true
+description: "Thanks for offering to volunteer with FRIENDS of SIES."
+---
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Thank you!</h1>
+    <p class="lede">Your volunteer note is on its way to the FRIENDS board.</p>
+  </div>
+  {% include "partials/wave-sand.njk" %}
+</header>
+
+<section class="give-option" aria-labelledby="thanks-h">
+  <h2 id="thanks-h">We've got it</h2>
+  <p>We'll be in touch soon about how you can help. In the meantime, if you have questions, email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  <p><a class="btn btn-primary" href="/ways-to-give/">Back to Ways to Give</a></p>
+</section>

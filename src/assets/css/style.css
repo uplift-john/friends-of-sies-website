@@ -505,13 +505,18 @@ main {
 .closing-cta .band-inner { max-width: 40rem; }
 .closing-cta .btn { font-size: 1.15rem; padding: 1rem 2.2rem; }
 
-/* Newsletter form */
+/* Forms (newsletter + volunteer) */
 .newsletter-form { max-width: 26rem; }
-.newsletter-form label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
-.newsletter-form input {
+.volunteer-form { max-width: 34rem; }
+.newsletter-form label,
+.volunteer-form label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+.newsletter-form input,
+.volunteer-form input,
+.volunteer-form textarea {
   display: block;
   width: 100%;
   font-size: 1rem;
+  font-family: inherit;
   padding: 0.7rem 0.9rem;
   border: 2px solid #b9c6d2;
   border-radius: 0.5rem;
@@ -519,12 +524,39 @@ main {
   background: #fff;
   transition: border-color 0.15s ease;
 }
-.newsletter-form input:focus {
+.newsletter-form input:focus,
+.volunteer-form input:focus,
+.volunteer-form textarea:focus {
   outline: none;
   border-color: var(--sea);
   box-shadow: 0 0 0 3px rgba(43, 122, 120, 0.2);
 }
-.newsletter-form .btn { font-size: 1rem; }
+.newsletter-form .btn,
+.volunteer-form .btn { font-size: 1rem; }
+.volunteer-form fieldset { border: 0; padding: 0; margin: 0 0 0.8rem; }
+.volunteer-form legend { font-weight: 600; margin-bottom: 0.35rem; padding: 0; }
+.volunteer-form .check-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+.volunteer-form .check-row input {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  accent-color: var(--sea);
+}
+.volunteer-form .optional { font-weight: 400; color: #5b6b78; }
+.volunteer-form .cf-turnstile { margin-bottom: 0.8rem; }
+.volunteer-form .hp-field { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+.form-error {
+  border-left: 4px solid #b3402a;
+  background: #fbeeea;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
 
 /* Footer */
 .site-footer {

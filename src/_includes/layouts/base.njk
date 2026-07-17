@@ -6,6 +6,7 @@
   <meta name="generator" content="Eleventy">
   <title>{% if title %}{{ title }} · {% endif %}{{ site.shortName }}</title>
   <meta name="description" content="{{ description or 'FRIENDS of Sullivan\'s Island Elementary School raises funds for the teachers, programs, and resources the district doesn\'t pay for.' }}">
+  {% if noindex %}<meta name="robots" content="noindex">{% endif %}
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" href="/assets/images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">

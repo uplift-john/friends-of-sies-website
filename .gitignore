@@ -7,3 +7,6 @@ source-photos/
 /logo.png
 /SIES logo.jpg
 /soar on skimmers.png
+
+# local dev secrets for wrangler pages dev
+.dev.vars

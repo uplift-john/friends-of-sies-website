@@ -12,6 +12,7 @@
 - [ ] Confirm both contact emails are correct: siesfriends.skimmers@gmail.com (general) and the separate advertising address in src/_data/site.yaml — a design reviewer flagged the pair as a possible typo.
 - [ ] Newsletter signup form posts to a `TODO` placeholder action — choose an email provider and wire it up.
 - [x] Volunteer sign-up URL — live: https://sies.membershiptoolkit.com/volunteer/169783 ("Sign up to volunteer" button on /ways-to-give/).
+- [ ] Own volunteer form (replaces the Membership Toolkit link) — built but NOT pushed; needs the one-time Resend + Turnstile setup in FORM_SETUP.md, then give Claude the Turnstile site key to swap in and ship.
 
 ## Post-launch / out of loop scope
 - [ ] CMS admin (e.g. Sveltia) + GitHub OAuth app setup.

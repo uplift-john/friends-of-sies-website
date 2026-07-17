@@ -55,8 +55,32 @@ description: "Give to Grow, the Fun Run, the Spring Auction, business sponsorshi
   <p>True to its name, the Fun Run is an enjoyable event for everyone. You can get involved as a race-day volunteer or by committing a bit more time to join the committee.</p>
   <h3>General interest</h3>
   <p>If you want to get involved with FRIENDS but don't see a specific event above, we still need your help. We need support throughout the year and are always looking for volunteers.</p>
-  <p><a class="btn btn-primary" href="https://sies.membershiptoolkit.com/volunteer/169783">Sign up to volunteer</a></p>
-  <p>Questions? Email <a href="mailto:{{ site.email }}">{{ site.email }}</a> and tell us how you'd like to help.</p>
+  <form class="volunteer-form" action="/api/volunteer" method="post">
+    <p class="form-error" id="volunteer-error" hidden>Something went wrong sending your form. Please try again — or email <a href="mailto:{{ site.email }}">{{ site.email }}</a> and tell us how you'd like to help.</p>
+    <label for="vol-name">Name</label>
+    <input type="text" id="vol-name" name="name" required autocomplete="name" maxlength="200">
+    <label for="vol-email">Email address</label>
+    <input type="email" id="vol-email" name="email" required autocomplete="email" maxlength="200">
+    <fieldset>
+      <legend>I'd like to help with</legend>
+      <label class="check-row"><input type="checkbox" name="interest" value="Spring Auction"> Spring Auction</label>
+      <label class="check-row"><input type="checkbox" name="interest" value="Fun Run"> Soar on Skimmers Fun Run</label>
+      <label class="check-row"><input type="checkbox" name="interest" value="General interest"> Wherever I'm needed</label>
+    </fieldset>
+    <label for="vol-message">Anything you'd like us to know? <span class="optional">(optional)</span></label>
+    <textarea id="vol-message" name="message" rows="4" maxlength="2000"></textarea>
+    <p class="hp-field" aria-hidden="true"><label for="vol-website">Leave this field empty</label><input type="text" id="vol-website" name="website" tabindex="-1" autocomplete="off"></p>
+    {# TODO: swap the Turnstile test sitekey below for the real one before pushing (FORM_SETUP.md) #}
+    <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
+    <button type="submit" class="btn btn-primary">Sign up to volunteer</button>
+  </form>
+  <p>Prefer email? Reach us at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script>
+    if (new URLSearchParams(location.search).has("form")) {
+      document.getElementById("volunteer-error").hidden = false;
+    }
+  </script>
 </section>
 
 <section class="band band-sea closing-cta">
