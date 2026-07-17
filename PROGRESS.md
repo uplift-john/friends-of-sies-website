@@ -1,6 +1,10 @@
 # PROGRESS
 
-ITERATION: 11
+STATUS: COMPLETE
+
+ITERATION: 11 — all Definition-of-Done items independently confirmed by a fresh
+verification subagent on 2026-07-17 (build, live 200, content+CTA, validation and
+a11y gates, Lighthouse 98/95 live, responsive+404, push-triggered CI redeploy, docs).
 
 ## Definition of Done checklist
 - [x] 1. Build: `npx @11ty/eleventy` zero errors
@@ -25,4 +29,4 @@ ITERATION: 11
 - Credentials found in SETUP.md (iter 9); .env created (gitignored), secrets set via gh.
 
 ## Next task
-Exit check: independent verification subagent, then STATUS: COMPLETE if confirmed.
+None — loop complete. Remaining human items live in HUMAN_TODO.md.
