@@ -7,13 +7,17 @@
   <title>{% if title %}{{ title }} · {% endif %}{{ site.shortName }}</title>
   <meta name="description" content="{{ description or 'FRIENDS of Sullivan\'s Island Elementary School raises funds for the teachers, programs, and resources the district doesn\'t pay for.' }}">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="site-header-inner">
-      {# TODO placeholder wordmark — no approved logo yet (HUMAN_TODO.md) #}
-      <p class="wordmark"><a href="/">FRIENDS<span class="wordmark-sub">of SIES</span></a></p>
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/assets/images/logo.png" alt="FRIENDS of SIES roundel logo — Together We Are an Ocean" width="52" height="52">
+        <span class="wordmark">FRIENDS<span class="wordmark-sub">of SIES</span></span>
+      </a>
       <nav class="site-nav" aria-label="Main">
         <ul>
           {% for item in nav %}

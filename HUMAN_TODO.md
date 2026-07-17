@@ -1,7 +1,7 @@
 # HUMAN_TODO — items that need a human
 
 ## Content placeholders on the site (from CONTEXT.md "DO NOT INVENT")
-- [ ] Logo / visual identity — site uses a text wordmark placeholder ("FRIENDS of SIES").
+- [x] Logo / visual identity — "Together We Are an Ocean" roundel (logo.png) now used in header + favicon. Confirm it's the approved mark; see IMAGE_WISHLIST.md for photos still wanted.
 - [ ] Donation URL for Give to Grow / Donate buttons — currently `TODO` placeholder links.
 - [ ] Fun Run registration URL (RunSignUp) — placeholder.
 - [ ] Auction platform URL (Event.Gives) — placeholder.

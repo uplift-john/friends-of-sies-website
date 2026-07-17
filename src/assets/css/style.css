@@ -9,14 +9,19 @@
 }
 
 :root {
-  --ink: #16324a;        /* deep harbor blue */
+  --ink: #1c3d5a;        /* harbor navy (from logo) */
   --ink-soft: #3d566e;
   --paper: #fdfaf5;      /* warm sand */
   --paper-deep: #f4ecdf;
-  --accent: #d96c3f;     /* warm coral */
-  --accent-deep: #b95428;
-  --sea: #2e7d74;        /* palmetto teal */
+  --accent: #d96c3f;     /* warm coral — the ONE action color */
+  --accent-deep: #b04a20;
+  --sea: #2b7a78;        /* deep teal (from logo) */
+  --sea-green: #4c9d8a;  /* sea-green (from logo) */
+  --mist: #cfe4e2;       /* sky mist (from logo) */
+  --gold: #f4c04e;       /* sun gold (from logo) */
   --max: 68rem;
+  --radius: 0.75rem;
+  --shadow: 0 1px 2px rgba(28, 61, 90, 0.06), 0 6px 18px rgba(28, 61, 90, 0.08);
   --serif: "Fraunces", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -62,9 +67,11 @@ img { max-width: 100%; height: auto; }
 
 /* Header & nav */
 .site-header {
-  background: var(--paper);
-  border-bottom: 3px solid var(--accent);
-  padding: 0.75rem 1rem;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(28, 61, 90, 0.08), 0 2px 12px rgba(28, 61, 90, 0.06);
+  padding: 0.65rem 1rem;
+  position: relative;
+  z-index: 5;
 }
 .site-header-inner {
   max-width: var(--max);
@@ -75,8 +82,15 @@ img { max-width: 100%; height: auto; }
   justify-content: space-between;
   gap: 0.5rem 1.5rem;
 }
-.wordmark { margin: 0; font-family: var(--serif); font-size: 1.6rem; font-weight: 700; }
-.wordmark a { color: var(--ink); text-decoration: none; }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand-logo { display: block; border-radius: 50%; }
+.wordmark { margin: 0; font-family: var(--serif); font-size: 1.45rem; font-weight: 700; line-height: 1.1; }
 .wordmark-sub {
   display: block;
   font-family: var(--sans);
@@ -120,8 +134,20 @@ img { max-width: 100%; height: auto; }
   padding: 0.8rem 1.6rem;
   border-radius: 999px;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(176, 74, 32, 0.35);
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
-.btn:hover { background: var(--accent-deep); color: #fff; }
+.btn:hover {
+  background: var(--accent-deep);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(176, 74, 32, 0.4);
+}
+.btn:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
 .btn-nav { font-size: 0.9rem; padding: 0.45rem 1.1rem; }
 .btn-nav:hover { border-bottom: none; }
 
@@ -133,12 +159,50 @@ main {
 }
 .lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 46rem; }
 
-/* Hero */
-.hero { text-align: center; padding: 2.5rem 0 1.5rem; }
-.hero .lede { margin: 0 auto 1.5rem; }
-.hero-cta { margin: 1.5rem 0 0.5rem; }
-.hero-cta .btn { font-size: 1.2rem; padding: 1rem 2.2rem; }
-.hero-note { color: var(--sea); font-weight: 600; margin-top: 0.5rem; }
+/* Hero — full-bleed photo with navy scrim */
+.hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -1.5rem;
+  padding: clamp(4rem, 10vw, 7.5rem) 1.25rem clamp(5rem, 12vw, 8.5rem);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(17, 40, 60, 0.92) 0%, rgba(17, 40, 60, 0.78) 45%, rgba(23, 52, 76, 0.35) 100%);
+}
+.hero-inner { position: relative; max-width: var(--max); margin: 0 auto; width: 100%; }
+.hero h1 {
+  color: #fff;
+  font-size: clamp(2.5rem, 6.5vw, 4.25rem);
+  max-width: 14ch;
+  margin: 0 0 1rem;
+}
+.hero .lede { color: #e6f0ef; max-width: 34rem; margin: 0 0 1.75rem; }
+.hero-cta { margin: 0 0 0.75rem; }
+.hero-cta .btn { font-size: 1.15rem; padding: 1rem 2.2rem; }
+.hero-note { color: var(--gold); font-weight: 600; margin: 0.75rem 0 0; }
+.hero-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: clamp(2rem, 5vw, 4.5rem);
+  display: block;
+}
 
 /* Pillars */
 .pillar-grid {
