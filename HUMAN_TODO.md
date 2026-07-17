@@ -11,7 +11,7 @@
 - [ ] Mailing address — not published (none provided).
 - [ ] Confirm both contact emails are correct: siesfriends.skimmers@gmail.com (general) and the separate advertising address in src/_data/site.yaml — a design reviewer flagged the pair as a possible typo.
 - [ ] Newsletter signup form posts to a `TODO` placeholder action — choose an email provider and wire it up.
-- [ ] Volunteer sign-up URL (Membership Toolkit volunteer page) — the "Volunteer your time" section on /ways-to-give/ uses an email placeholder until the exact URL is confirmed.
+- [x] Volunteer sign-up URL — live: https://sies.membershiptoolkit.com/volunteer/169783 ("Sign up to volunteer" button on /ways-to-give/).
 
 ## Post-launch / out of loop scope
 - [ ] CMS admin (e.g. Sveltia) + GitHub OAuth app setup.
