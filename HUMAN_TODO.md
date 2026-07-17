@@ -14,5 +14,8 @@
 - [ ] Mailing address — not published (none provided).
 - [ ] Newsletter signup form posts to a `TODO` placeholder action — choose an email provider and wire it up.
 
+## Post-deploy
+- [ ] Re-run Lighthouse against the live `*.pages.dev` URL (local run scored performance 100 / accessibility 95).
+
 ## Post-launch / out of loop scope
 - [ ] CMS admin (e.g. Sveltia) + GitHub OAuth app setup.
