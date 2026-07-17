@@ -10,3 +10,4 @@ source-photos/
 
 # local dev secrets for wrangler pages dev
 .dev.vars
+.wrangler/
