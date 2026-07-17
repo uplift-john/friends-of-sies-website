@@ -4,7 +4,7 @@ STATUS: DESIGN LOOP IN PROGRESS (content loop completed earlier — see git hist
 
 ## Design loop
 
-ITERATION: 6 (max 8)
+ITERATION: 7 (max 8)
 Live URL: https://friends-of-sies.pages.dev/ · push to main auto-deploys.
 Eyes: `node scripts/screenshots.mjs` → design-review/ (8 pages × 1440/768/390).
 
@@ -33,10 +33,21 @@ Eyes: `node scripts/screenshots.mjs` → design-review/ (8 pages × 1440/768/390
   page-hero lede lightened.
 - **Iter 6 — verification pass.** Re-viewed all pages/widths; checked suspected
   CTA clipping at 390px (false alarm — thumbnail artifact; live box is correct).
+- **Reviewer #1 verdict: FAIL** (Imagery 7; rest 8–9). Flagged: placeholder tile
+  in home grid, 4 imageless pages, orphaned "PTA?", tablet 3+1 season grid,
+  placeholder label contrast, gold strong on PTA hero, closing band on only 3
+  pages. Out-of-scope flags (link placeholders, newsletter wording, dual emails)
+  → HUMAN_TODO.md.
+- **Iter 7 — reviewer fixes.** Photos on all 8 pages (ways-to-give ×2,
+  for-businesses, friends-and-pta, contact), closing teal CTA band sitewide,
+  placeholder tile redesigned (navy/teal + gold sun, white label),
+  text-wrap: balance, explicit 2×2/4-across season grid, #ffdf9e strong text.
+  Decision: Arts & Enrichment keeps an honest placeholder — inventing/stock
+  photos is prohibited; the shot is #1 on IMAGE_WISHLIST.md.
 
 ### Next
-Exit check: fresh reviewer subagent scores the 24 screenshots strictly.
-If all ≥ 8 → deploy, confirm live 200 → DESIGN COMPLETE.
+Reviewer #2 (fresh context) re-scores. If all ≥ 8 → push to main (CI deploys),
+confirm live 200 → DESIGN COMPLETE. Iteration 8 is the hard cap.
 
 ## Definition of Done (content loop) — all complete
 Build ✓ · Live 200 ✓ · CTA ✓ · validate+a11y ✓ · Lighthouse 98/95 ✓ · CI deploy ✓
