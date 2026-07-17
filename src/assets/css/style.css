@@ -1,20 +1,239 @@
-/* FRIENDS of SIES — mobile-first, hand-written CSS */
-:root {
-  --ink: #1d3557;
-  --paper: #fdfcf9;
-  --accent: #e07a3f;
+/* FRIENDS of SIES — hand-written, mobile-first CSS.
+   One self-hosted webfont: Fraunces (variable, OFL) for headings. */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/fraunces-var.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
 }
+
+:root {
+  --ink: #16324a;        /* deep harbor blue */
+  --ink-soft: #3d566e;
+  --paper: #fdfaf5;      /* warm sand */
+  --paper-deep: #f4ecdf;
+  --accent: #d96c3f;     /* warm coral */
+  --accent-deep: #b95428;
+  --sea: #2e7d74;        /* palmetto teal */
+  --max: 68rem;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
   color: var(--ink);
   background: var(--paper);
+  overflow-wrap: break-word;
 }
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+h1 { font-size: clamp(2rem, 6vw, 3.25rem); margin: 0 0 0.75rem; }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin: 2.5rem 0 0.75rem; }
+h3 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+
+a { color: var(--sea); }
+a:hover { color: var(--accent-deep); }
+
+img { max-width: 100%; height: auto; }
+
 .skip-link {
   position: absolute;
   left: -9999px;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
 }
-.skip-link:focus {
-  left: 1rem;
-  top: 1rem;
+.skip-link:focus { left: 1rem; top: 1rem; z-index: 10; }
+
+/* Header & nav */
+.site-header {
+  background: var(--paper);
+  border-bottom: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+}
+.site-header-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+.wordmark { margin: 0; font-family: var(--serif); font-size: 1.6rem; font-weight: 700; }
+.wordmark a { color: var(--ink); text-decoration: none; }
+.wordmark-sub {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sea);
+}
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1.1rem;
+}
+.site-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.35rem 0;
+}
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--accent-deep);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  font-size: 1.05rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.btn:hover { background: var(--accent-deep); color: #fff; }
+.btn-nav { font-size: 0.9rem; padding: 0.45rem 1.1rem; }
+.btn-nav:hover { border-bottom: none; }
+
+/* Layout */
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+.lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 46rem; }
+
+/* Hero */
+.hero { text-align: center; padding: 2.5rem 0 1.5rem; }
+.hero .lede { margin: 0 auto 1.5rem; }
+.hero-cta { margin: 1.5rem 0 0.5rem; }
+.hero-cta .btn { font-size: 1.2rem; padding: 1rem 2.2rem; }
+.hero-note { color: var(--sea); font-weight: 600; margin-top: 0.5rem; }
+
+/* Pillars */
+.pillar-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin: 1.5rem 0;
+}
+.pillar {
+  background: #fff;
+  border: 1px solid var(--paper-deep);
+  border-top: 4px solid var(--sea);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+.pillar p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
+
+/* Stats */
+.stat-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  margin: 1.5rem 0 0.5rem;
+}
+.stat {
+  background: var(--paper-deep);
+  border-radius: 0.5rem;
+  padding: 1.1rem;
+  text-align: center;
+}
+.stat dt { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); }
+.stat dd {
+  margin: 0.3rem 0 0;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-deep);
+}
+
+.fine-print { font-size: 0.85rem; color: var(--ink-soft); }
+
+/* Lists & sections */
+.season-list li { margin-bottom: 0.5rem; }
+.event, .give-option, .fund-pillar { border-bottom: 1px solid var(--paper-deep); padding-bottom: 1.5rem; }
+.event-season { color: var(--sea); font-weight: 600; margin-top: -0.25rem; }
+.board-list { columns: 2; column-gap: 2rem; padding-left: 1.2rem; }
+@media (max-width: 30rem) { .board-list { columns: 1; } }
+
+.todo-placeholder {
+  background: var(--paper-deep);
+  border-left: 4px solid var(--accent);
+  padding: 0.6rem 1rem;
+  border-radius: 0 0.35rem 0.35rem 0;
+}
+
+/* PTA note + closing CTA */
+.pta-note {
+  background: var(--paper-deep);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+}
+.pta-note h2 { margin-top: 0; }
+.closing-cta { text-align: center; padding: 2rem 0 0; }
+
+/* Newsletter form */
+.newsletter-form { max-width: 26rem; }
+.newsletter-form label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+.newsletter-form input {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--ink-soft);
+  border-radius: 0.35rem;
+  margin-bottom: 0.8rem;
+  background: #fff;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--ink);
+  color: #eef3f7;
+  padding: 2.5rem 1rem;
+  margin-top: 2rem;
+}
+.footer-inner { max-width: var(--max); margin: 0 auto; }
+.site-footer a { color: #a8d8cf; }
+.footer-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem; }
+.footer-tagline { color: #a8d8cf; font-style: italic; margin-top: 0; }
+.footer-tax { font-size: 0.85rem; color: #c3cfd9; }
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
 }
