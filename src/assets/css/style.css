@@ -13,8 +13,8 @@
   --ink-soft: #3d566e;
   --paper: #fdfaf5;      /* warm sand */
   --paper-deep: #f4ecdf;
-  --accent: #d96c3f;     /* warm coral — the ONE action color */
-  --accent-deep: #b04a20;
+  --accent: #b95428;     /* warm coral, deep enough for AA white text — the ONE action color */
+  --accent-deep: #96401a;
   --sea: #2b7a78;        /* deep teal (from logo) */
   --sea-green: #4c9d8a;  /* sea-green (from logo) */
   --mist: #cfe4e2;       /* sky mist (from logo) */
@@ -283,7 +283,7 @@ main {
 .band-white { background: #fff; }
 .band-mist { background: var(--mist); }
 .band-navy { background: var(--ink); color: #dbe7ee; }
-.band-sea { background: linear-gradient(155deg, var(--sea) 0%, var(--sea-green) 100%); color: #f2faf8; }
+.band-sea { background: linear-gradient(155deg, var(--sea) 0%, #22615f 100%); color: #f2faf8; }
 .band-navy .section-title,
 .band-sea .section-title { color: #fff; }
 .band-sea a:not(.btn) { color: #fff; }
@@ -418,7 +418,7 @@ main {
 }
 .page-hero-inner { max-width: var(--max); margin: 0 auto; }
 .page-hero h1 { color: #fff; margin: 0 0 0.6rem; }
-.page-hero .lede { color: #d7e8e6; margin: 0; }
+.page-hero .lede { color: #e9f3f2; margin: 0; }
 .page-hero .lede a { color: #fff; }
 .page-hero .lede strong { color: var(--gold); }
 .band-wave-bottom { position: absolute; bottom: -1px; left: 0; width: 100%; height: clamp(1.75rem, 4vw, 3.25rem); display: block; }
@@ -437,14 +437,35 @@ main {
 .story-figure figcaption { font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.6rem; }
 
 /* Lists & sections */
-.event, .give-option, .fund-pillar {
+.event, .give-option, .fund-pillar, .card {
   background: #fff;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 1.75rem;
   margin-bottom: 1.75rem;
 }
-.event h2, .give-option h2, .fund-pillar h2 { margin-top: 0; }
+.event h2, .give-option h2, .fund-pillar h2, .card h2 { margin-top: 0; }
+.card > p:last-child { margin-bottom: 0; }
+.card-duo {
+  display: grid;
+  gap: 1.75rem;
+  align-items: start;
+}
+@media (min-width: 46em) {
+  .card-duo { grid-template-columns: 1fr 1fr; }
+  .card-duo .card { margin-bottom: 0; }
+}
+.fund-pillar { display: grid; gap: 1.5rem; align-items: center; }
+@media (min-width: 46em) {
+  .fund-pillar-has-img { grid-template-columns: 1fr 15rem; }
+}
+.fund-pillar-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 0.25rem);
+  display: block;
+}
 .event-has-media {
   display: grid;
   gap: 1.75rem;
@@ -485,12 +506,19 @@ main {
   display: block;
   width: 100%;
   font-size: 1rem;
-  padding: 0.65rem 0.8rem;
-  border: 1px solid var(--ink-soft);
-  border-radius: 0.35rem;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid #b9c6d2;
+  border-radius: 0.5rem;
   margin-bottom: 0.8rem;
   background: #fff;
+  transition: border-color 0.15s ease;
 }
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--sea);
+  box-shadow: 0 0 0 3px rgba(43, 122, 120, 0.2);
+}
+.newsletter-form .btn { font-size: 1rem; }
 
 /* Footer */
 .site-footer {

@@ -13,14 +13,19 @@ description: "The teachers, programs, and campus improvements FRIENDS of SIES pa
 </header>
 
 {% for pillar in pillars %}
-<section class="fund-pillar" aria-labelledby="pillar-{{ loop.index }}">
-  <h2 id="pillar-{{ loop.index }}">{{ pillar.title }}</h2>
-  <p>{{ pillar.example }}</p>
-  <ul>
-    {% for item in pillar.items %}
-    <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+<section class="fund-pillar{% if pillar.image %} fund-pillar-has-img{% endif %}" aria-labelledby="pillar-{{ loop.index }}">
+  <div class="fund-pillar-body">
+    <h2 id="pillar-{{ loop.index }}">{{ pillar.title }}</h2>
+    <p>{{ pillar.example }}</p>
+    <ul>
+      {% for item in pillar.items %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% if pillar.image %}
+  <img class="fund-pillar-img" src="{{ pillar.image }}" alt="{{ pillar.imageAlt }}" loading="lazy">
+  {% endif %}
 </section>
 {% endfor %}
 

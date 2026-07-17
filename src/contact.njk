@@ -12,13 +12,14 @@ description: "Get in touch with FRIENDS of SIES, or join the newsletter for upda
   {% include "partials/wave-sand.njk" %}
 </header>
 
-<section aria-labelledby="contact-h">
+<div class="card-duo">
+<section class="card" aria-labelledby="contact-h">
   <h2 id="contact-h">Get in touch</h2>
   <p>General inquiries: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   <p>Advertising &amp; sponsorships: <a href="mailto:{{ site.advertisingEmail }}">{{ site.advertisingEmail }}</a></p>
 </section>
 
-<section aria-labelledby="newsletter-h">
+<section class="card" aria-labelledby="newsletter-h">
   <h2 id="newsletter-h">Join the FRIENDS newsletter</h2>
   <p>Be first to hear about the Fun Run, the auction, and what your giving builds.</p>
   {# TODO: newsletter provider not chosen — form action is a placeholder (HUMAN_TODO.md) #}
@@ -29,3 +30,4 @@ description: "Get in touch with FRIENDS of SIES, or join the newsletter for upda
     <p class="fine-print">Signup is almost ready — while we finish setting it up, email <a href="mailto:{{ site.email }}">{{ site.email }}</a> with "newsletter" in the subject and we'll add you.</p>
   </form>
 </section>
+</div>
