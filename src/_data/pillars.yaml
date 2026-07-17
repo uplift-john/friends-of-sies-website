@@ -1,5 +1,8 @@
 # Value pillars (CONTEXT.md §3)
+# image/imageAlt are presentation-only (design loop); factual copy unchanged.
 - title: Great Teachers
+  image: /assets/images/garden-teacher.jpg
+  imageAlt: A smiling SIES teacher holds up a leafy potato plant pulled from the school garden
   example: The Spanish teacher, the certified technology teacher, and academic interventionists — educators the district budget doesn't cover.
   items:
     - Spanish instruction
@@ -7,6 +10,8 @@
     - Academic interventionists and classroom support
     - Instructional resources and professional development
 - title: Hands-On Science & Nature
+  image: /assets/images/garden-harvest.jpg
+  imageAlt: Students proudly show radishes they harvested from the Green Heart garden beds
   example: Live marine science on campus — the wet lab, aquarium touch tanks, and the Green Heart garden.
   items:
     - The wet lab and aquarium touch tanks
@@ -18,11 +23,15 @@
     - Art and music programs
     - Enrichment days
 - title: A Better Campus
+  image: /assets/images/playground-community.jpg
+  imageAlt: Families and children enjoy the shaded school playground together
   example: Playground improvements and athletic facilities like the basketball court and track.
   items:
     - Playground improvements
     - Athletic facilities — basketball court and track
 - title: Every Student Supported
+  image: /assets/images/classroom-tech.jpg
+  imageAlt: Students smile while working on laptops in a bright SIES classroom
   example: Calmer, safer dismissals and intervention services for students who need extra help.
   items:
     - Academic intervention and student support services

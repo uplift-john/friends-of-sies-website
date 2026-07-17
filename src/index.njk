@@ -16,48 +16,69 @@ description: "FRIENDS of SIES funds the programs the district doesn't — the aq
   <svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,40 C240,70 480,10 720,30 C960,50 1200,20 1440,45 L1440,70 L0,70 Z" fill="#fdfaf5"></path></svg>
 </section>
 
-<section class="pillars" aria-labelledby="pillars-heading">
-  <h2 id="pillars-heading">What your gift becomes</h2>
-  <p>FRIENDS funds the programs the district doesn't — the aquariums, the track, the interventionists, the art and music days.</p>
-  <div class="pillar-grid">
-    {% for pillar in pillars %}
-    <article class="pillar">
-      <h3>{{ pillar.title }}</h3>
-      <p>{{ pillar.example }}</p>
-    </article>
-    {% endfor %}
+<section class="band band-sand pillars" aria-labelledby="pillars-heading">
+  <div class="band-inner">
+    <h2 id="pillars-heading" class="section-title">What your gift becomes</h2>
+    <p class="section-lede">FRIENDS funds the programs the district doesn't — the aquariums, the track, the interventionists, the art and music days.</p>
+    <div class="pillar-grid">
+      {% for pillar in pillars %}
+      <article class="pillar">
+        {% if pillar.image %}
+        <img class="pillar-img" src="{{ pillar.image }}" alt="{{ pillar.imageAlt }}" loading="lazy">
+        {% else %}
+        <div class="pillar-img pillar-img-placeholder"><span>photo coming: art &amp; music days</span></div>
+        {% endif %}
+        <div class="pillar-body">
+          <h3>{{ pillar.title }}</h3>
+          <p>{{ pillar.example }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="section-more"><a href="/what-we-fund/">See everything we fund →</a></p>
   </div>
-  <p><a href="/what-we-fund/">See everything we fund →</a></p>
 </section>
 
-<section class="numbers" aria-labelledby="numbers-heading">
-  <h2 id="numbers-heading">Our impact, by the numbers</h2>
-  <dl class="stat-grid">
-    <div class="stat"><dt>Raised last year</dt><dd>~$200K</dd></div>
-    <div class="stat"><dt>Students served</dt><dd>~500</dd></div>
-    <div class="stat"><dt>Per child, per year</dt><dd>~$500</dd></div>
-    <div class="stat"><dt>Participation goal</dt><dd>100%</dd></div>
-  </dl>
-  <p class="fine-print">Figures are approximate, from our 2025–26 year — our strongest since COVID.</p>
+<section class="band band-navy numbers" aria-labelledby="numbers-heading">
+  <div class="band-inner">
+    <h2 id="numbers-heading" class="section-title">Our impact, by the numbers</h2>
+    <dl class="stat-grid">
+      <div class="stat"><dt>Raised last year</dt><dd>~$200K</dd></div>
+      <div class="stat"><dt>Students served</dt><dd>~500</dd></div>
+      <div class="stat"><dt>Per child, per year</dt><dd>~$500</dd></div>
+      <div class="stat"><dt>Participation goal</dt><dd>100%</dd></div>
+    </dl>
+    <p class="fine-print">Figures are approximate, from our 2025–26 year — our strongest since COVID.</p>
+  </div>
 </section>
 
-<section class="rhythm" aria-labelledby="rhythm-heading">
-  <h2 id="rhythm-heading">A year of giving, together</h2>
-  <ol class="season-list">
-    {% for event in events %}
-    <li><strong><a href="/events/#{{ event.slug }}">{{ event.name }}</a></strong> — {{ event.season }}</li>
-    {% endfor %}
-  </ol>
-  <p><a href="/events/">Explore the annual calendar →</a></p>
+<section class="band band-white rhythm" aria-labelledby="rhythm-heading">
+  <div class="band-inner">
+    <h2 id="rhythm-heading" class="section-title">A year of giving, together</h2>
+    <ol class="season-list">
+      {% for event in events %}
+      <li class="season-item">
+        <span class="season-tag">{{ event.season }}</span>
+        <strong><a href="/events/#{{ event.slug }}">{{ event.name }}</a></strong>
+      </li>
+      {% endfor %}
+    </ol>
+    <p class="section-more"><a href="/events/">Explore the annual calendar →</a></p>
+  </div>
 </section>
 
-<section class="pta-note" aria-labelledby="pta-heading">
-  <h2 id="pta-heading">Wondering how FRIENDS differs from the PTA?</h2>
-  <p>PTA creates the experience. FRIENDS creates the impact. Two groups, one amazing school — <a href="/friends-and-pta/">here's the short version</a>.</p>
+<section class="band band-mist pta-note" aria-labelledby="pta-heading">
+  <div class="band-inner">
+    <h2 id="pta-heading" class="section-title">Wondering how FRIENDS differs from the PTA?</h2>
+    <p>PTA creates the experience. FRIENDS creates the impact. Two groups, one amazing school — <a href="/friends-and-pta/">here's the short version</a>.</p>
+  </div>
 </section>
 
-<section class="closing-cta">
-  <h2>Join your neighbors in giving</h2>
-  <p>{{ site.taxLine }}</p>
-  <p><a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a></p>
+<section class="band band-sea closing-cta">
+  <svg class="band-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,45 C240,15 480,60 720,35 C960,10 1200,55 1440,30 L1440,0 L0,0 Z" fill="#cfe4e2"></path></svg>
+  <div class="band-inner">
+    <h2 class="section-title">Join your neighbors in giving</h2>
+    <p>{{ site.taxLine }}</p>
+    <p><a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a></p>
+  </div>
 </section>
