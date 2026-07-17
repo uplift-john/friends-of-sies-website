@@ -4,17 +4,30 @@ title: Events
 permalink: /events/
 description: "The FRIENDS of SIES annual calendar: Directory & Signs, the Soar on Skimmers Fun Run, Give to Grow, and the Spring Auction."
 ---
-<h1>Events &amp; the Annual Calendar</h1>
-<p class="lede">FRIENDS runs on four moments across the school year — from fall sponsorships to the spring auction, with our year-round Give to Grow campaign always open.</p>
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Events &amp; the Annual Calendar</h1>
+    <p class="lede">FRIENDS runs on four moments across the school year — from fall sponsorships to the spring auction, with our year-round Give to Grow campaign always open.</p>
+  </div>
+  {% include "partials/wave-sand.njk" %}
+</header>
 
 {% for event in events %}
-<section class="event" id="{{ event.slug }}" aria-labelledby="{{ event.slug }}-h">
-  <h2 id="{{ event.slug }}-h">{{ event.name }}</h2>
-  <p class="event-season">{{ event.season }}</p>
-  <p>{{ event.summary }}</p>
-  <p><strong>How to take part:</strong> {{ event.participate }}</p>
-  {% if event.link == "TODO" %}
-  <p class="todo-placeholder"><strong>{{ event.linkLabel }}</strong></p>
+<section class="event{% if event.slug == 'fun-run' %} event-has-media{% endif %}" id="{{ event.slug }}" aria-labelledby="{{ event.slug }}-h">
+  <div class="event-body">
+    <h2 id="{{ event.slug }}-h">{{ event.name }}</h2>
+    <p class="event-season">{{ event.season }}</p>
+    <p>{{ event.summary }}</p>
+    <p><strong>How to take part:</strong> {{ event.participate }}</p>
+    {% if event.link == "TODO" %}
+    <p class="todo-placeholder"><strong>{{ event.linkLabel }}</strong></p>
+    {% endif %}
+  </div>
+  {% if event.slug == 'fun-run' %}
+  <div class="event-media">
+    <img src="/assets/images/soar-on-skimmers.jpg" alt="Soar on Skimmers Fun Run artwork — a black skimmer bird gliding over a wave under a sunburst" loading="lazy">
+    <img src="/assets/images/fun-run-beach.jpg" alt="Students run along the beach during the Soar on Skimmers Fun Run" loading="lazy">
+  </div>
   {% endif %}
 </section>
 {% endfor %}

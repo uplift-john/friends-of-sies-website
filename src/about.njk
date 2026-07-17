@@ -4,13 +4,23 @@ title: Our Story
 permalink: /about/
 description: "The mission, board, and island heritage of FRIENDS of Sullivan's Island Elementary School — and how giving works through the Coastal Community Foundation."
 ---
-<h1>Our Story</h1>
-<p class="lede">FRIENDS of SIES is a parent-run board that raises funds to support the academic, physical, social and emotional well-being of each student at SIES.</p>
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Our Story</h1>
+    <p class="lede">FRIENDS of SIES is a parent-run board that raises funds to support the academic, physical, social and emotional well-being of each student at SIES.</p>
+  </div>
+  {% include "partials/wave-sand.njk" %}
+</header>
 
 <section aria-labelledby="mission">
   <h2 id="mission">Our mission</h2>
   <p>We exist to provide direct financial support to enhance the learning experience in ways that strengthen the academic, physical, social and emotional well-being of each student at SIES — formally, to raise funds to enhance the ability of Sullivan's Island Elementary School to attain its educational goals.</p>
 </section>
+
+<figure class="story-figure">
+  <img src="/assets/images/garden-two-students.jpg" alt="Two students harvest potatoes from raised garden beds beside the school" loading="lazy">
+  <figcaption>Students at work in the school garden.</figcaption>
+</figure>
 
 <section aria-labelledby="heritage">
   <h2 id="heritage">An island tradition</h2>
@@ -34,7 +44,10 @@ description: "The mission, board, and island heritage of FRIENDS of Sullivan's I
   </ul>
 </section>
 
-<section class="closing-cta">
-  <h2>Be part of the story</h2>
-  <p><a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a></p>
+<section class="band band-sea closing-cta">
+  <svg class="band-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,45 C240,15 480,60 720,35 C960,10 1200,55 1440,30 L1440,0 L0,0 Z" fill="#fdfaf5"></path></svg>
+  <div class="band-inner">
+    <h2 class="section-title">Be part of the story</h2>
+    <p><a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a></p>
+  </div>
 </section>

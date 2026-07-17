@@ -4,8 +4,13 @@ title: What We Fund
 permalink: /what-we-fund/
 description: "The teachers, programs, and campus improvements FRIENDS of SIES pays for at Sullivan's Island Elementary — beyond what the district budget covers."
 ---
-<h1>What We Fund</h1>
-<p class="lede">When a family gives, this is what their money becomes. FRIENDS pays for the people, programs, and places that the Charleston County School District budget does not cover — in service of the academic, physical, social, and emotional well-being of every student.</p>
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <h1>What We Fund</h1>
+    <p class="lede">When a family gives, this is what their money becomes. FRIENDS pays for the people, programs, and places that the Charleston County School District budget does not cover — in service of the academic, physical, social, and emotional well-being of every student.</p>
+  </div>
+  {% include "partials/wave-sand.njk" %}
+</header>
 
 {% for pillar in pillars %}
 <section class="fund-pillar" aria-labelledby="pillar-{{ loop.index }}">
@@ -26,7 +31,10 @@ description: "The teachers, programs, and campus improvements FRIENDS of SIES pa
   <p class="fine-print">Public figures are rounded; final numbers are approved by the board.</p>
 </section>
 
-<section class="closing-cta">
-  <h2>Help build what's next</h2>
-  <p><a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a></p>
+<section class="band band-sea closing-cta">
+  <svg class="band-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,45 C240,15 480,60 720,35 C960,10 1200,55 1440,30 L1440,0 L0,0 Z" fill="#fdfaf5"></path></svg>
+  <div class="band-inner">
+    <h2 class="section-title">Help build what's next</h2>
+    <p><a class="btn btn-primary" href="/ways-to-give/">Give to Grow — Donate</a></p>
+  </div>
 </section>
