@@ -29,20 +29,15 @@ Page bodies and layout stay out of the CMS on purpose — those are design, not 
 ### Part A — the human-only steps (the reason the loop skipped this)
 These require clicking through GitHub/Cloudflare while signed in as you. ~10 minutes.
 
-**1. Deploy the auth worker.**
-Sveltia needs a tiny authenticator because you're on Cloudflare Pages (not Netlify). Use the
-official `sveltia-cms-auth` Cloudflare Worker.
-- Go to https://github.com/sveltia/sveltia-cms-auth and use its "Deploy to Cloudflare" button
-  (or `wrangler deploy` from a clone).
-- Copy the resulting Worker URL — it looks like
-  `https://sveltia-cms-auth.<your-subdomain>.workers.dev`. You'll need it twice below.
+**1. Deploy the auth worker. ✅ DONE**
+Your Worker URL is: `https://sveltia-cms-auth.johnmoye82.workers.dev`
 
 **2. Create a GitHub OAuth app.**
 - Go to https://github.com/settings/applications/new
 - **Application name:** `FRIENDS of SIES CMS`
 - **Homepage URL:** `https://friends-of-sies.pages.dev`
-- **Authorization callback URL:** `<YOUR_WORKER_URL>/callback`
-  (e.g. `https://sveltia-cms-auth.your-subdomain.workers.dev/callback`)
+- **Authorization callback URL:** `https://sveltia-cms-auth.johnmoye82.workers.dev/callback`
+  (the `/callback` suffix is required)
 - Click **Register application**, then **generate a client secret**. Copy the **Client ID** and
   **Client Secret** (the secret is shown once).
 
@@ -80,7 +75,7 @@ backend:
   name: github
   repo: uplift-john/friends-of-sies-website
   branch: main
-  base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev   # your Worker URL
+  base_url: https://sveltia-cms-auth.johnmoye82.workers.dev
 ```
 
 Collections will map to `src/_data/site.yaml`, `board.yaml`, `events.yaml`, and `pillars.yaml`
