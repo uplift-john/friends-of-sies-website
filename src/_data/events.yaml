@@ -1,11 +1,4 @@
 events:
-  - name: Directory & Signs
-    season: Fall (September)
-    slug: directory-signs
-    summary: Local businesses sponsor placement in the school directory and on school-fence banner signage - putting their name in front of the whole school community. Sponsorship is fully tax-deductible.
-    participate: Become a sponsor - email us to reserve directory or sign placement.
-    link: ''
-    linkLabel: ''
   - name: Soar on Skimmers Fun Run
     season: 'Fall  next event: October 23, 2026 (date to be confirmed)'
     slug: fun-run
@@ -18,8 +11,15 @@ events:
     slug: give-to-grow
     summary: Our core annual campaign. Everyone gets involved — give whatever you like! The goal is 100% school participation, and families who donate receive SIES stickers.
     participate: Give any time, in any amount.
-    link: https://event.gives/siesfriends26
-    linkLabel: Donation link coming soon
+    link: https://coastal.fcsuite.com/erp/donate/create/fund?funit_id=1900
+    linkLabel: Click to give
+  - name: Directory & Signs
+    season: Fall (September)
+    slug: directory-signs
+    summary: Local businesses sponsor placement in the school directory and on school-fence banner signage - putting their name in front of the whole school community. Sponsorship is fully tax-deductible.
+    participate: Become a sponsor - email us to reserve directory or sign placement.
+    link: ''
+    linkLabel: ''
   - name: Spring Auction
     season: Spring (March)
     slug: spring-auction
