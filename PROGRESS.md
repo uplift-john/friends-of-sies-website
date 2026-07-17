@@ -4,7 +4,7 @@ STATUS: DESIGN LOOP IN PROGRESS (content loop completed earlier — see git hist
 
 ## Design loop
 
-ITERATION: 7 (max 8)
+ITERATION: 8 (max 8 — hard cap)
 Live URL: https://friends-of-sies.pages.dev/ · push to main auto-deploys.
 Eyes: `node scripts/screenshots.mjs` → design-review/ (8 pages × 1440/768/390).
 
@@ -45,9 +45,19 @@ Eyes: `node scripts/screenshots.mjs` → design-review/ (8 pages × 1440/768/390
   Decision: Arts & Enrichment keeps an honest placeholder — inventing/stock
   photos is prohibited; the shot is #1 on IMAGE_WISHLIST.md.
 
+- **Reviewer #2 verdict: FAIL** (Polish 7; rest 8–9). Named blockers: 501(c)(3)
+  breaking mid-term, small gold hero microcopy contrast, newsletter Sign-up in
+  Donate coral. Minor: ragged season tag, events first card unbalanced, hero
+  lede over thin scrim.
+- **Iter 8 — polish blockers.** Word joiners inside 501(c)(3) (invisible; tax
+  wording unchanged), hero note lightened/enlarged (#ffe9b8, 1.05rem), scrim
+  deepened, hero lede narrowed to 30rem, Sign-up → teal .btn-sea, season-tag
+  text-wrap balance, Give to Grow event card gets harvest photo. Verified via
+  element crops: taxline single-line; photo present.
+
 ### Next
-Reviewer #2 (fresh context) re-scores. If all ≥ 8 → push to main (CI deploys),
-confirm live 200 → DESIGN COMPLETE. Iteration 8 is the hard cap.
+Reviewer #3 (fresh) re-scores. PASS → push (CI deploys) → live 200 →
+DESIGN COMPLETE. FAIL → STATUS: HALTED (cap reached) with scores.
 
 ## Definition of Done (content loop) — all complete
 Build ✓ · Live 200 ✓ · CTA ✓ · validate+a11y ✓ · Lighthouse 98/95 ✓ · CI deploy ✓

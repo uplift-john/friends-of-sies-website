@@ -13,7 +13,7 @@ description: "The FRIENDS of SIES annual calendar: Directory & Signs, the Soar o
 </header>
 
 {% for event in events %}
-<section class="event{% if event.slug == 'fun-run' %} event-has-media{% endif %}" id="{{ event.slug }}" aria-labelledby="{{ event.slug }}-h">
+<section class="event{% if event.slug == 'fun-run' %} event-has-media{% endif %}{% if event.slug == 'give-to-grow' %} card-has-img{% endif %}" id="{{ event.slug }}" aria-labelledby="{{ event.slug }}-h">
   <div class="event-body">
     <h2 id="{{ event.slug }}-h">{{ event.name }}</h2>
     <p class="event-season">{{ event.season }}</p>
@@ -23,6 +23,9 @@ description: "The FRIENDS of SIES annual calendar: Directory & Signs, the Soar o
     <p class="todo-placeholder"><strong>{{ event.linkLabel }}</strong></p>
     {% endif %}
   </div>
+  {% if event.slug == 'give-to-grow' %}
+  <img class="card-img" src="/assets/images/garden-harvest.jpg" alt="Students show off radishes harvested from the school garden" loading="lazy">
+  {% endif %}
   {% if event.slug == 'fun-run' %}
   <div class="event-media">
     <img src="/assets/images/soar-on-skimmers.jpg" alt="Soar on Skimmers Fun Run artwork — a black skimmer bird gliding over a wave under a sunburst" loading="lazy">

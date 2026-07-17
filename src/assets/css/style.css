@@ -210,6 +210,8 @@ a:focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 2px;
 }
+.btn-sea { background: var(--sea); box-shadow: 0 2px 6px rgba(34, 97, 95, 0.35); }
+.btn-sea:hover { background: #22615f; box-shadow: 0 4px 12px rgba(34, 97, 95, 0.4); }
 .btn-nav {
   display: inline-flex;
   align-items: center;
@@ -249,7 +251,7 @@ main {
 .hero-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(100deg, rgba(17, 40, 60, 0.92) 0%, rgba(17, 40, 60, 0.78) 45%, rgba(23, 52, 76, 0.35) 100%);
+  background: linear-gradient(100deg, rgba(17, 40, 60, 0.93) 0%, rgba(17, 40, 60, 0.8) 45%, rgba(23, 52, 76, 0.48) 100%);
 }
 .hero-inner { position: relative; max-width: var(--max); margin: 0 auto; width: 100%; }
 .hero h1 {
@@ -258,10 +260,10 @@ main {
   max-width: 14ch;
   margin: 0 0 1rem;
 }
-.hero .lede { color: #e6f0ef; max-width: 34rem; margin: 0 0 1.75rem; }
+.hero .lede { color: #e6f0ef; max-width: 30rem; margin: 0 0 1.75rem; }
 .hero-cta { margin: 0 0 0.75rem; }
 .hero-cta .btn { font-size: 1.15rem; padding: 1rem 2.2rem; }
-.hero-note { color: var(--gold); font-weight: 600; margin: 0.75rem 0 0; }
+.hero-note { color: #ffe9b8; font-weight: 600; font-size: 1.05rem; margin: 0.75rem 0 0; }
 .hero-wave {
   position: absolute;
   left: 0;
@@ -404,6 +406,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--sea);
+  text-wrap: balance;
 }
 .season-item a { color: var(--ink); text-decoration: none; font-family: var(--serif); font-size: 1.12rem; }
 .season-item a:hover { color: var(--accent-deep); text-decoration: underline; }
