@@ -12,7 +12,7 @@ description: "The teachers, programs, and campus improvements FRIENDS of SIES pa
   {% include "partials/wave-sand.njk" %}
 </header>
 
-{% for pillar in pillars %}
+{% for pillar in pillars.pillars %}
 <section class="fund-pillar{% if pillar.image %} card-has-img{% endif %}" aria-labelledby="pillar-{{ loop.index }}">
   <div class="fund-pillar-body">
     <h2 id="pillar-{{ loop.index }}">{{ pillar.title }}</h2>

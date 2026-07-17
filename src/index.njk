@@ -21,7 +21,7 @@ description: "FRIENDS of SIES funds the programs the district doesn't — the aq
     <h2 id="pillars-heading" class="section-title">What your gift becomes</h2>
     <p class="section-lede">FRIENDS funds the programs the district doesn't — the aquariums, the track, the interventionists, the art and music days.</p>
     <div class="pillar-grid">
-      {% for pillar in pillars %}
+      {% for pillar in pillars.pillars %}
       <article class="pillar">
         {% if pillar.image %}
         <img class="pillar-img" src="{{ pillar.image }}" alt="{{ pillar.imageAlt }}" loading="lazy">
@@ -56,7 +56,7 @@ description: "FRIENDS of SIES funds the programs the district doesn't — the aq
   <div class="band-inner">
     <h2 id="rhythm-heading" class="section-title">A year of giving, together</h2>
     <ol class="season-list">
-      {% for event in events %}
+      {% for event in events.events %}
       <li class="season-item">
         <span class="season-tag">{{ event.season }}</span>
         <strong><a href="/events/#{{ event.slug }}">{{ event.name }}</a></strong>

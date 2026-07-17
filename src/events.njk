@@ -12,7 +12,7 @@ description: "The FRIENDS of SIES annual calendar: Directory & Signs, the Soar o
   {% include "partials/wave-sand.njk" %}
 </header>
 
-{% for event in events %}
+{% for event in events.events %}
 <section class="event{% if event.slug == 'fun-run' %} event-has-media{% endif %}{% if event.slug == 'give-to-grow' %} card-has-img{% endif %}" id="{{ event.slug }}" aria-labelledby="{{ event.slug }}-h">
   <div class="event-body">
     <h2 id="{{ event.slug }}-h">{{ event.name }}</h2>

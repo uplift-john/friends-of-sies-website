@@ -38,7 +38,7 @@ description: "The mission, board, and island heritage of FRIENDS of Sullivan's I
   <h2 id="board">The 2026–2027 Board</h2>
   <p>FRIENDS is a parent-run, self-perpetuating volunteer board. Members serve two-year terms, and the board meets quarterly, organized into Governance, Internal Affairs, and External Affairs committees.</p>
   <ul class="board-list">
-    {% for member in board %}
+    {% for member in board.board %}
     <li><strong>{{ member.name }}</strong> — {{ member.role }}</li>
     {% endfor %}
   </ul>
