@@ -17,7 +17,8 @@ pillars:
       - The Green Heart gardening program
       - Science labs and materials
   - title: Arts & Enrichment
-    imageAlt: ''
+    image: /assets/images/photo7.png
+    imageAlt: kids making art with playdoh
     example: Art and music programs and enrichment days that round out every student's week.
     items:
       - Art and music programs
