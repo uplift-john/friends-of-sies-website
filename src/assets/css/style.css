@@ -153,6 +153,10 @@ img { max-width: 100%; height: auto; }
   color: var(--accent-deep);
   border-bottom-color: var(--accent);
 }
+.site-nav ul li:nth-of-type(6) a {
+  color: var(--ink);
+  font-weight: 700;
+}
 
 @media (min-width: 56.31em) {
   .site-nav { order: 2; }
