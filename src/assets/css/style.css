@@ -218,6 +218,7 @@ a:focus-visible {
   min-height: 44px;
   font-size: 0.95rem;
   padding: 0 1.25rem;
+  background: var(--ink);
 }
 .btn-nav:hover { border-bottom: none; }
 
