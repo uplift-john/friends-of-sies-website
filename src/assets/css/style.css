@@ -486,6 +486,7 @@ main {
   border-radius: var(--radius);
   display: block;
 }
+.event-media img:first-child { max-width: 60%; margin: 0 auto; }
 .event-media img:last-child { aspect-ratio: 3 / 2; object-fit: cover; }
 .event-season { color: var(--sea); font-weight: 600; margin-top: -0.25rem; }
 .board-list { columns: 2; column-gap: 2rem; padding-left: 1.2rem; }
