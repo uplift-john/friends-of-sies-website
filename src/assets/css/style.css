@@ -475,19 +475,35 @@ main {
 .event-has-media {
   display: grid;
   gap: 1.75rem;
-  align-items: start;
+  align-items: center;
 }
 @media (min-width: 46em) {
   .event-has-media { grid-template-columns: 1.4fr 1fr; }
 }
-.event-media { display: grid; gap: 1rem; }
-.event-media img {
+.event-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+/* Logo: a smaller brand mark, clean on the white card (no tinted panel —
+   the JPG's white background would clash with a colored one). */
+.event-media .event-logo {
   width: 100%;
-  border-radius: var(--radius);
+  max-width: 200px;
+  height: auto;
+  padding: 0.25rem 0.5rem;
   display: block;
 }
-.event-media img:first-child { max-width: 60%; margin: 0 auto; }
-.event-media img:last-child { aspect-ratio: 3 / 2; object-fit: cover; }
+/* Photo: the main image — a full-width rounded photo card. */
+.event-media .event-photo {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+}
 .event-season { color: var(--sea); font-weight: 600; margin-top: -0.25rem; }
 .board-list { columns: 2; column-gap: 2rem; padding-left: 1.2rem; }
 @media (max-width: 30rem) { .board-list { columns: 1; } }
