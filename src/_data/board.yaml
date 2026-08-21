@@ -3,7 +3,7 @@ board:
   - role: President
     name: Paige Hauff
   - role: Vice President
-    name: Megan Stifel
+    name: John Moye
   - role: Treasurer
     name: Meredith Ebenhoeh
   - role: Secretary
@@ -12,7 +12,5 @@ board:
     name: Heidi Kaloupek
   - role: Member
     name: Jimmy Craven
-  - role: Member
-    name: John Moye
   - role: Member
     name: Bridget Price
