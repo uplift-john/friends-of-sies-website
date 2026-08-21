@@ -20,7 +20,7 @@
         <span class="wordmark">FRIENDS<span class="wordmark-sub">of SIES</span></span>
       </a>
       <div class="header-actions">
-        <a class="btn btn-nav" href="/ways-to-give/">Donate</a>
+        <a class="btn btn-nav" href="{{ site.donateUrl }}" target="_blank" rel="noopener">Donate</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-list">
           <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
           Menu
@@ -42,6 +42,7 @@
     <div class="footer-inner">
       <p class="footer-name">{{ site.name }}</p>
       <p class="footer-tagline">{{ site.tagline }}</p>
+      <p class="footer-cta"><a class="btn btn-primary" href="{{ site.donateUrl }}" target="_blank" rel="noopener">Donate now</a></p>
       <p>Serving families across Sullivan's Island, Isle of Palms, Mount Pleasant, and the Greater Charleston area in South Carolina.</p>
       <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       <p class="footer-tax">{{ site.taxLine }}</p>

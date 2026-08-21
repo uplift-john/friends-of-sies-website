@@ -585,6 +585,9 @@ main {
 .site-footer a { color: #a8d8cf; }
 .footer-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem; }
 .footer-tagline { color: #a8d8cf; font-style: italic; margin-top: 0; }
+.footer-cta { margin: 1.25rem 0 1.75rem; }
+.footer-cta a.btn,
+.footer-cta a.btn:hover { color: #fff; }
 .footer-tax { font-size: 0.85rem; color: #c3cfd9; }
 .footer-nav {
   list-style: none;
