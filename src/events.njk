@@ -19,7 +19,9 @@ description: "The FRIENDS of SIES annual calendar: Directory & Signs, the Soar o
     <p class="event-season">{{ event.season }}</p>
     <p>{{ event.summary }}</p>
     <p><strong>How to take part:</strong> {{ event.participate }}</p>
-    {% if event.link == "TODO" %}
+    {% if event.link and event.link != "TODO" %}
+    <p><a class="btn btn-primary" href="{{ event.link }}"{% if event.link.startsWith("http") %} target="_blank" rel="noopener"{% endif %}>{{ event.linkLabel }}</a></p>
+    {% elif event.link == "TODO" %}
     <p class="todo-placeholder"><strong>{{ event.linkLabel }}</strong></p>
     {% endif %}
   </div>
