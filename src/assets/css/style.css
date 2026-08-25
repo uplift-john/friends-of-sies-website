@@ -596,3 +596,9 @@ main {
   flex-wrap: wrap;
   gap: 0.25rem 1.25rem;
 }
+
+/* Sponsor recognition grid */
+.sponsor-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); margin: 1.25rem 0 2.5rem; }
+.sponsor-tile { display: flex; align-items: center; justify-content: center; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.25rem; aspect-ratio: 3 / 2; transition: transform .15s ease; }
+.sponsor-tile:hover { transform: translateY(-2px); }
+.sponsor-tile img { max-width: 100%; max-height: 100%; object-fit: contain; }
